@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casual Effect</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<%if(login==='yes' ) {%>
+
+  <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
+    <%} else {%>
+
+      <body class="hold-transition dark-mode sidebar-collapse layout-fixed layout-navbar-fixed layout-footer-fixed">
+        <%}%>
+
+          <div class="wrapper">
+
+            <!-- Preloader -->
+            <div class="preloader flex-column justify-content-center align-items-center">
+              <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            </div>
+
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-dark">
+              <!-- Left navbar links -->
+              <ul class="navbar-nav">
+                <%if(login==='yes' ) {%>
+                  <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Actualités</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Espace Membres</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Jeux</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/logout" class="nav-link">Déconnexion</a>
+                  </li>
+                <%} else {%>
+                  <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/login" class="nav-link">Login</a>
+                  </li>
+                <%}%>
+              </ul>
+
+              <!-- Right navbar links -->
+              <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                  <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                    <i class="fas fa-search"></i>
+                  </a>
+                  <div class="navbar-search-block">
+                    <form class="form-inline">
+                      <div class="input-group input-group-sm">
+                        <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                          aria-label="Search">
+                        <div class="input-group-append">
+                          <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                          </button>
+                          <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+
+                <!-- Messages Dropdown Menu -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="far fa-comments"></i>
+                    <span class="badge badge-danger navbar-badge">3</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <a href="#" class="dropdown-item">
+                      <!-- Message Start -->
+                      <div class="media">
+                        <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                        <div class="media-body">
+                          <h3 class="dropdown-item-title">
+                            Brad Diesel
+                            <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                          </h3>
+                          <p class="text-sm">Call me whenever you can...</p>
+                          <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                        </div>
+                      </div>
+                      <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                      <!-- Message Start -->
+                      <div class="media">
+                        <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                        <div class="media-body">
+                          <h3 class="dropdown-item-title">
+                            John Pierce
+                            <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                          </h3>
+                          <p class="text-sm">I got your message bro</p>
+                          <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                        </div>
+                      </div>
+                      <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                      <!-- Message Start -->
+                      <div class="media">
+                        <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                        <div class="media-body">
+                          <h3 class="dropdown-item-title">
+                            Nora Silvester
+                            <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                          </h3>
+                          <p class="text-sm">The subject goes here</p>
+                          <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                        </div>
+                      </div>
+                      <!-- Message End -->
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                  </div>
+                </li>
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link" data-toggle="dropdown" href="#">
+                    <i class="far fa-bell"></i>
+                    <span class="badge badge-warning navbar-badge">15</span>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <span class="dropdown-item dropdown-header">15 Notifications</span>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                      <i class="fas fa-envelope mr-2"></i> 4 new messages
+                      <span class="float-right text-muted text-sm">3 mins</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                      <i class="fas fa-users mr-2"></i> 8 friend requests
+                      <span class="float-right text-muted text-sm">12 hours</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item">
+                      <i class="fas fa-file mr-2"></i> 3 new reports
+                      <span class="float-right text-muted text-sm">2 days</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <i class="fas fa-th-large"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /.navbar -->
+
+
+            <%- include('includes/sidebar') %>
+
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+              <!-- Content Header (Page header) -->
+              <div class="content-header">
+                <div class="container-fluid">
+                  <div class="row mb-2">
+                    <div class="col-sm-6">
+                      <h1 class="m-0">Casual Effect</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item active">Accueil</li>
+                      </ol>
+                    </div><!-- /.col -->
+                  </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+              </div>
+              <!-- /.content-header -->
+
+              <!-- Main content -->
+              <section class="content">
+                <div class="container-fluid">
+                  <%if(login==='yes' ) {%>
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">Les jeux du moment</h3>
+
+                        <div class="card-tools">
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body p-0">
+                        <ul class="products-list product-list-in-card pl-2 pr-2">
+                          <li class="item">
+                            <div class="product-img">
+                              <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            </div>
+                            <div class="product-info">
+                              <a href="javascript:void(0)" class="product-title">Black Desert Online
+                                <span class="badge badge-warning float-right">12</span></a>
+                              <span class="product-description">
+                                MMORPG
+                              </span>
+                            </div>
+                          </li>
+                          <!-- /.item -->
+                          <li class="item">
+                            <div class="product-img">
+                              <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            </div>
+                            <div class="product-info">
+                              <a href="javascript:void(0)" class="product-title">Star Wars Battlefront II
+                                <span class="badge badge-info float-right">8</span></a>
+                              <span class="product-description">
+                                FPS
+                              </span>
+                            </div>
+                          </li>
+                          <!-- /.item -->
+                          <li class="item">
+                            <div class="product-img">
+                              <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            </div>
+                            <div class="product-info">
+                              <a href="javascript:void(0)" class="product-title">
+                                Sea Of Thieves <span class="badge badge-danger float-right">
+                                  7
+                                </span>
+                              </a>
+                              <span class="product-description">
+                                Aventure
+                              </span>
+                            </div>
+                          </li>
+                          <!-- /.item -->
+                          <li class="item">
+                            <div class="product-img">
+                              <img src="dist/img/default-150x150.png" alt="Product Image" class="img-size-50">
+                            </div>
+                            <div class="product-info">
+                              <a href="javascript:void(0)" class="product-title">PlayStation 4
+                                <span class="badge badge-success float-right">$399</span></a>
+                              <span class="product-description">
+                                PlayStation 4 500GB Console (PS4)
+                              </span>
+                            </div>
+                          </li>
+                          <!-- /.item -->
+                        </ul>
+                      </div>
+                      <!-- /.card-body -->
+                      <div class="card-footer text-center">
+                        <a href="javascript:void(0)" class="uppercase">View All Products</a>
+                      </div>
+                      <!-- /.card-footer -->
+                    </div>
+                    <div class="card">
+                      <div class="card-header">
+                        <h3 class="card-title">Latest Members</h3>
+
+                        <div class="card-tools">
+                          <span class="badge badge-danger">8 New Members</span>
+                          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body p-0">
+                        <ul class="users-list clearfix">
+                          <li>
+                            <img src="dist/img/user1-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Alexander Pierce</a>
+                            <span class="users-list-date">Today</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user8-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Norman</a>
+                            <span class="users-list-date">Yesterday</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user7-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Jane</a>
+                            <span class="users-list-date">12 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user6-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">John</a>
+                            <span class="users-list-date">12 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user2-160x160.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Alexander</a>
+                            <span class="users-list-date">13 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user5-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Sarah</a>
+                            <span class="users-list-date">14 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user4-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Nora</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                          <li>
+                            <img src="dist/img/user3-128x128.jpg" alt="User Image">
+                            <a class="users-list-name" href="#">Nadia</a>
+                            <span class="users-list-date">15 Jan</span>
+                          </li>
+                        </ul>
+                        <!-- /.users-list -->
+                      </div>
+                      <!-- /.card-body -->
+                      <div class="card-footer text-center">
+                        <a href="javascript:">View All Users</a>
+                      </div>
+                      <!-- /.card-footer -->
+                    </div>
+
+                    <div class="card card-success">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12 col-lg-6 col-xl-4">
+                            <div class="card mb-2 bg-gradient-dark">
+                              <img class="card-img-top" src="../dist/img/photo1.png" alt="Dist Photo 1">
+                              <div class="card-img-overlay d-flex flex-column justify-content-end">
+                                <h5 class="card-title text-primary text-white">Card Title</h5>
+                                <p class="card-text text-white pb-2 pt-1">Lorem ipsum dolor sit amet, consectetur
+                                  adipisicing elit sed do eiusmod tempor.</p>
+                                <a href="#" class="text-white">Last update 2 mins ago</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-lg-6 col-xl-4">
+                            <div class="card mb-2">
+                              <img class="card-img-top" src="../dist/img/photo2.png" alt="Dist Photo 2">
+                              <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <h5 class="card-title text-white mt-5 pt-2">Card Title</h5>
+                                <p class="card-text pb-2 pt-1 text-white">
+                                  Lorem ipsum dolor sit amet, <br>
+                                  consectetur adipisicing elit <br>
+                                  sed do eiusmod tempor.
+                                </p>
+                                <a href="#" class="text-white">Last update 15 hours ago</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 col-lg-6 col-xl-4">
+                            <div class="card mb-2">
+                              <img class="card-img-top" src="../dist/img/photo3.jpg" alt="Dist Photo 3">
+                              <div class="card-img-overlay">
+                                <h5 class="card-title text-primary">Card Title</h5>
+                                <p class="card-text pb-1 pt-1 text-white">
+                                  Lorem ipsum dolor <br>
+                                  sit amet, consectetur <br>
+                                  adipisicing elit sed <br>
+                                  do eiusmod tempor. </p>
+                                <a href="#" class="text-primary">Last update 3 days ago</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <%}%>
+
+                </div>
+                <!--/. container-fluid -->
+              </section>
+              <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+              <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+
+            <!-- Main Footer -->
+            <footer class="main-footer">
+              <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+              All rights reserved.
+              <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.1.0-rc
+              </div>
+            </footer>
+          </div>
+          <!-- ./wrapper -->
+
+          <!-- REQUIRED SCRIPTS -->
+          <!-- jQuery -->
+          <script src="plugins/jquery/jquery.min.js"></script>
+          <!-- Bootstrap -->
+          <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <!-- overlayScrollbars -->
+          <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+          <!-- AdminLTE App -->
+          <script src="dist/js/adminlte.js"></script>
+
+          <!-- PAGE PLUGINS -->
+          <!-- jQuery Mapael -->
+          <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
+          <script src="plugins/raphael/raphael.min.js"></script>
+          <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script>
+          <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script>
+          <!-- ChartJS -->
+          <script src="plugins/chart.js/Chart.min.js"></script>
+
+          <!-- AdminLTE for demo purposes -->
+          <script src="dist/js/demo.js"></script>
+          <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+          <script src="dist/js/pages/dashboard2.js"></script>
+      </body>
+
+</html>
